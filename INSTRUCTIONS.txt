@@ -1,0 +1,55 @@
+                                  --------------------------
+                                  -------INSTRUCTIONS-------
+                                  --------------------------
+
+
+**FULLSCREEN RECOMMENDED**
+
+# = Not case sensitive
+#* = Case sensitive
+
+--// Built In Functions (3\.2)
+
+<NOTE THAT YOU SHOULD NOT TYPE THE '' THAT INDICATE WHAT YOU SHOULD WRITE>
+
+#* lan
+..Write 'lan' in the input box
+..\ Text/ -- Text that will display in the output
+
+#* in lan then
+..Write 'in lan then' in the input box
+..\ Value/ -- Number of times to repeat
+..\ Text/ -- What do you want to repeat
+
+#* Est
+..Write 'Est' in the input box
+..\ EstTime>> -- Amout of time to wait till the output box displays the command
+..\ Input/ -- The default input box, the commands wait the time set to wait in EstTime>> and then they will display
+
+#* lang
+..Write 'lang' in the input box
+..\ cmd/ -- Declare an input(built in) and load it. Code: [input_load].nlang OR [input_load].ilang
+..\ langName/ -- Name your lang (Can be whatever you want)
+### [input_load].nlang ###
+..\ yourLangName inp/ -- [input_load].nlang = Get keyboard inputs, Code: [lang_loadKeypress=lang:GetKeyboard, from_lang[keyboard]]
+..\ yourLangName kPress[ -- Enter a letter here (Key Press)
+..\ yourLangName cmd/ -- send a command to the program, in this case, detecting the keypress. Code: lang.DetectKeyPress_WaitForInput
+..\ TAKP/ -- Stands for Text After Key Press (When you press the specific key the set text will appear in the output box
+
+### [input_load].ilang ###
+..\ langName/ -- Name your lang (Can be whatever you want)
+..\ yourLangName inp/ -- Get the lang Inputs, Code: [lang_,GetLangInputs], [from_lang[Input]]
+..\ yourLangName input/ -- Here you create a new input. Code: lang:CreateNewInput()
+..\ yourLangName langInputText/ -- Obvious the input text (Ex. How many apples do you want: )
+..\ yourLangName langOutputText/ -- Text that you get before the number (Ex. [Erin has] 42 Apples)
+..\ yourLangName langOutputEndText/ -- Text that you get after the number (Ex. Erin has 42 [Apples])
+..\ yourLangName langInputCommand/ -- Output Mode. Modes: lan 
+                                                          in lan then
+
+### Mode: lan ###
+-/ Simply displays the output message
+
+### Mode: in lan then ###
+-/ (Optional) Value/ -- You can set the amout of times the text repeats (leave blank if you dont want that)
+-/ [Left Blank] -- You can choose the amout of times the text repeats
+
